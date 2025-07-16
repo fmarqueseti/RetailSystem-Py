@@ -1,10 +1,10 @@
 # RetailSystem-Py
 
-**RetailSystem-Py** is an educational sales and inventory management system developed in Python. This project was built as part of the course *"Python from Beginner to Advanced + Artificial Intelligence"*, taught by **Caio Sampaio** from the **Pythonando** platform.
+**RetailSystem-Py** is an educational sales management system developed in Python. This project was built as part of the course *"Python from Beginner to Advanced + Artificial Intelligence"*, taught by **Caio Sampaio** from the **Pythonando** platform.
 
 The system offers two versions:
 - Text-based interface (console mode)
-- Graphical interface using **Tkinter** – *Under development*
+- Graphical interface using **Tkinter**
 
 Additionally, it integrates with a MySQL relational database.
 
@@ -14,6 +14,7 @@ Additionally, it integrates with a MySQL relational database.
 
 - Practice core and advanced Python programming concepts
 - Integrate relational databases with Python applications
+- Develop graphical user interfaces (GUIs) using Tkinter.
 - Apply best practices such as code modularization and internationalization
 
 ---
@@ -28,13 +29,21 @@ RetailSystem-Py/
 │   ├── schema.sql              # Database creation and initial load script
 └── src/
     ├── txt/                    # Text-based interface version
-    │   ├── myERP.py            # Main application file
-    │   ├── mysql_conn.py       # Database connection details
+    │   ├── myERP.py            # Main script file
+    │   ├── mysql_conn.py       # Database connection details (MySQL)
     │   ├── myUtil.py           # Utility functions
     │   ├── ordersMenu.py       # Orders menu
     │   ├── productsMenu.py     # Products menu
-    │   └── statisticsMenu.py   # Sales statistics menu (charts)
-    └── tkinter/                # Graphical interface version (Tkinter)
+    │   └── statisticsMenu.py   # Sales statistics menu (graphs/charts)
+    │
+    ├── tkinter/                # Graphical interface version (Tkinter)
+        ├── myERP.py            # Main application script file
+        ├── connection.py       # Database connection class (MySQL)
+        ├── login.py            # Login/Signup class
+        ├── mainMenu.py         # Main menu class
+        ├── ordersList.py       # Orders management class
+        ├── productsMenu.py     # Product menu class
+        └── statistics.py       # Sales statistics class (graphs/charts)
 ```
 
 ---
@@ -84,7 +93,6 @@ pip install pymysql matplotlib
 ### Text-based Interface:
 
 ```bash
-cd src/txt
 python3 myERP.py
 ```
 

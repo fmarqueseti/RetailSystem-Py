@@ -1,10 +1,10 @@
 # RetailSystem-Py
 
-**RetailSystem-Py** é um sistema educacional de gerenciamento de vendas e controle de estoque desenvolvido em Python. O projeto foi construído como parte do curso *"Python do básico ao avançado + Inteligência Artificial"*, ministrado por **Caio Sampaio** da plataforma **Pythonando**.
+**RetailSystem-Py** é um sistema educacional de gerenciamento de vendas desenvolvido em Python. O projeto foi construído como parte do curso *"Python do básico ao avançado + Inteligência Artificial"*, ministrado por **Caio Sampaio** da plataforma **Pythonando**.
 
 O sistema possui duas versões:
 - Interface texto (modo console)
-- Interface gráfica (utilizando **Tkinter**) - *Em construção*
+- Interface gráfica (utilizando **Tkinter**)
 
 Além disso, integra banco de dados MySQL.
 
@@ -14,6 +14,7 @@ Além disso, integra banco de dados MySQL.
 
 - Praticar os fundamentos e recursos avançados da linguagem Python
 - Integrar banco de dados relacionais com aplicações Python
+- Criar interfaces gráficas com Tkinter
 - Explorar boas práticas como modularização e internacionalização de sistemas
 
 ---
@@ -29,12 +30,20 @@ RetailSystem-Py/
 └── src/
     ├── txt/                    # Versão com interface texto
     │   ├── myERP.py            # Arquito principal
-    │   ├── mysql_conn.py       # Detalhes de conexão ao banco de dados
+    │   ├── mysql_conn.py       # Detalhes de conexão ao banco de dados mysql
     │   ├── myUtil.py           # Funções utilitárias
     │   ├── ordersMenu.py       # Menu de pedidos
     │   ├── productsMenu.py     # Menu de produtos
     │   └── statisticsMenu.py   # Menu de estatísticas de vendas (gráficos)
+    │
     └── tkinter/                # Versão com interface gráfica (tkinter)
+        ├── myERP.py            # Arquito principal
+        ├── connection.py       # Classe de conexão ao banco de dados mysql
+        ├── login.py            # Classe de login/signup
+        ├── mainMenu.py         # Classe do menu principal
+        ├── ordersList.py       # Classe de pedidos
+        ├── productsMenu.py     # Classe do menu de produtos
+        └── statistics.py       # Classe de estatísticas de vendas (gráficos)
 ```
 
 ---
@@ -83,7 +92,6 @@ pip install pymysql matplotlib
 ### Interface Texto:
 
 ```bash
-cd src/txt
 python3 myERP.py
 ```
 
